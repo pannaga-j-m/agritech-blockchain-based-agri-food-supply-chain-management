@@ -1,0 +1,115 @@
+/* src/index.css
+   Base reset, fonts, and tailwind hooks (if present).
+*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Nunito:wght@400;600&display=swap');
+
+:root{
+  /* Design tokens (Tech + Nature) */
+  --bg-900: #0D1117;        /* dark */
+  --bg-100: #FAFAFA;        /* light */
+  --neon-blue: #00E0FF;
+  --leaf-green: #00B56A;
+  --muted-ink: #94a3b8;
+  --card-radius: 14px;
+  --glass: rgba(255,255,255,0.04);
+  --glass-light: rgba(13,17,23,0.6);
+  --soft-shadow: 0 10px 30px rgba(2,6,23,0.5);
+  --glass-shadow: 0 8px 30px rgba(3,12,30,0.45);
+  --glass-border: rgba(255,255,255,0.06);
+  --accent: var(--neon-blue);
+  --success: var(--leaf-green);
+}
+
+/* light theme tokens */
+:root[data-theme='light']{
+  --bg: var(--bg-100);
+  --text: #06121a;
+  --card-bg: #ffffff;
+  --panel-glass: rgba(0,0,0,0.03);
+}
+
+/* dark theme tokens */
+:root[data-theme='dark']{
+  --bg: var(--bg-900);
+  --text: #FAFAFA;
+  --card-bg: rgba(10,13,17,0.6);
+  --panel-glass: rgba(255,255,255,0.02);
+}
+
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family: "Inter", "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-tap-highlight-color: transparent;
+  transition: background .28s ease, color .28s ease;
+}
+
+a{color:var(--accent); text-decoration:none}
+button{font-family:inherit}
+
+/* Generic container */
+.container{
+  max-width:1200px;
+  margin:28px auto;
+  padding:16px;
+}
+
+/* Card baseline */
+.card{
+  background:var(--card-bg);
+  border-radius:var(--card-radius);
+  padding:18px;
+  box-shadow:var(--soft-shadow);
+  border:1px solid var(--glass-border);
+}
+
+/* Rounded full buttons used widely */
+.btn {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:10px 14px;
+  border-radius:12px;
+  border:none;
+  cursor:pointer;
+  font-weight:600;
+}
+
+/* Accent / primary */
+.btn-primary{
+  background:linear-gradient(90deg,var(--accent),var(--success));
+  color:#021018;
+  box-shadow: 0 6px 20px rgba(0,224,255,0.06);
+}
+
+/* Success */
+.btn-success{
+  background:var(--success);
+  color:#021018;
+}
+
+/* Small status text */
+.status-message{
+  margin-top:12px;
+  padding:10px;
+  border-radius:8px;
+  background:var(--panel-glass);
+  color:var(--muted-ink);
+}
+
+/* Responsive helpers */
+.row{display:flex; gap:16px; flex-wrap:wrap}
+.col{flex:1; min-width:240px}
+.h-stack{display:flex;align-items:center;gap:12px}
+
+/* Small micro-lift */
+.micro-lift{transition:transform .22s ease, box-shadow .22s ease}
+.micro-lift:hover{transform:translateY(-6px); box-shadow: 0 12px 40px rgba(2,6,23,0.6);}
+/* map container tweaks */
+.leaflet-container { border-radius:12px; height:100%; }

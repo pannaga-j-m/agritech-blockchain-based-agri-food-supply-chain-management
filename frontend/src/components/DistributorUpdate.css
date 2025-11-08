@@ -1,0 +1,250 @@
+/* 🚚 Distributor Portal - Elegant Gradient Background & Modern Cards */
+
+
+.page-container {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== Page Container ===== */
+.page-container {
+  max-width: 900px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(15px);
+  border-radius: 22px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+  padding: 2.5rem;
+  color: #222;
+  transition: all 0.4s ease;
+}
+
+.page-container:hover {
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== Header ===== */
+.page-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* ===== Wallet Display ===== */
+.wallet-display {
+  display: inline-block;
+  background: linear-gradient(90deg, #ffa726, #ffcc80);
+  color: white;
+  border-radius: 12px;
+  padding: 8px 14px;
+  font-weight: 600;
+  box-shadow: 0 3px 12px rgba(255, 167, 38, 0.4);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* ===== Product List ===== */
+.product-list {
+  margin-top: 1.5rem;
+}
+
+.product-list h3 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* ===== Product Cards ===== */
+.action-card {
+  padding: 1.5rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid transparent;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.action-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Distributor Button Styles */
+.action-card button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.action-card button:hover {
+  transform: translateY(-2px);
+}
+
+/* ===== Purchase Button ===== */
+.action-card button[style*="#28a745"] {
+  background: linear-gradient(90deg, #43a047, #66bb6a);
+}
+
+.action-card button[style*="#28a745"]:hover {
+  box-shadow: 0 8px 20px rgba(102, 187, 106, 0.4);
+}
+
+/* ===== Commission Button ===== */
+.action-card button[style*="#ff9800"] {
+  background: linear-gradient(90deg, #fb8c00, #ffa726);
+}
+
+.action-card button[style*="#ff9800"]:hover {
+  box-shadow: 0 8px 20px rgba(255, 167, 38, 0.4);
+}
+
+/* ===== Status Message ===== */
+.status-message {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(255, 167, 38, 0.1);
+  border-left: 4px solid #ff9800;
+  font-weight: 500;
+  color: #b76e00;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .page-container {
+    padding: 1.5rem;
+  }
+  .page-header h1 {
+    font-size: 1.8rem;
+  }
+}
+/* ===== Video Background ===== */
+.truck-bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 1;
+  transform: scale(1.55);
+  transition: all 1s ease;
+}
+
+.truck-bg-video.playing {
+  filter: brightness(0.8) contrast(1.1);
+  transform: scale(1.02);
+  transition: all 0.8s ease-in-out;
+}
+
+/* ===== Distributor Portal Layout ===== */
+.page-container {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  width: 80%;
+  max-width: 1000px;
+  margin: 3rem auto;
+  transition: all 0.8s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.page-header h1 {
+  text-align: center;
+  color: #ff9800;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ===== Card States ===== */
+.video-active {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  transition: all 0.8s ease;
+}
+
+/* Shrink card effect */
+.shrink-card {
+  transform: scale(0.92);
+  transition: all 0.8s ease;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Fade out internal content during dispatch */
+.shrink-card .action-card,
+.shrink-card .product-list button {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+/* Fade back in when restored */
+.page-container:not(.shrink-card) .action-card,
+.page-container:not(.shrink-card) .product-list button {
+  opacity: 1;
+  transition: opacity 0.6s ease;
+}
+
+/* ===== Buttons ===== */
+.buy-btn,
+.commission-btn,
+.dispatch-btn {
+  background: linear-gradient(90deg, #ff9800, #ffb84d);
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.buy-btn:hover,
+.commission-btn:hover,
+.dispatch-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(255, 152, 0, 0.4);
+}
+
+/* ===== Lists ===== */
+.product-list {
+  margin-top: 2rem;
+}
+
+.action-card {
+  border: 1px solid #ffcc80;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1.2rem;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(6px);
+  transition: all 0.4s ease;
+}
+
+.action-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Status */
+.status-message {
+  text-align: center;
+  font-weight: 500;
+  color: #333;
+  margin-top: 1rem;
+}

@@ -1,0 +1,411 @@
+/* ====== Global Background ====== */
+/* ====== Global Background ====== */
+/* ====== AgroLedger Background: Tech Harmony V2 ====== */
+/* ===== Landing Page Background Only ===== */
+/* ===== Landing Page Background (with Smooth Fade-In) ===== */
+.landing-page {
+  position: relative;
+  min-height: 100vh;
+  background:
+    url("../assets/back.jpg") center center / cover no-repeat;
+  background-attachment: fixed;
+  color: #fff;
+animation: fadeInBackground 1s ease-in-out forwards;
+  opacity: 0;
+}
+
+/* Smooth fade-in animation */
+@keyframes fadeInBackground {
+  0% {
+    opacity: 0;
+    filter: brightness(0.6) blur(1px);
+  }
+  60% {
+    opacity: 0.8;
+    filter: brightness(0.8) blur(0.5px);
+  }
+  100% {
+    opacity: 1;
+    filter: brightness(1) blur(0);
+  }
+}
+
+
+/* === Hero Section Styling === */
+.hero-section {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 60vh;
+  padding: 2rem 1rem;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero-title {
+  font-family: "lobster", sans-serif;
+  font-size: 3.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #009970; /* balanced green-blue tone */
+  letter-spacing: 3px;
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+.gradient-text {
+  background: linear-gradient( #4e2d08);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.title-underline {
+  width: 80px;
+  height: 5px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #4d350a, #4a3507);
+  margin: 0.5rem auto 1rem;
+  box-shadow: 0 0 2px rgba(1, 1, 1, 0.6);
+  animation: pulseLine 2.5s ease-in-out infinite;
+}
+
+@keyframes pulseLine {
+  0%, 100% { opacity: 0.8; transform: scaleX(1); }
+  50% { opacity: 1; transform: scaleX(1.2); }
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #0a0909;
+  line-height: 1.6;
+  margin-top: 0.5rem;
+  max-width: 650px;
+  opacity: 0;
+  animation: fadeInSubtitle 1s ease-in-out 0.5s forwards;
+}
+
+@keyframes fadeInSubtitle {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.hero-subtitle span {
+  color: #0a0a0a;
+  font-weight: 600;
+}
+
+/* Responsive tweak */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.3rem;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 1rem 3rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.nav-logo .brand {
+  font-weight: 700;
+  font-size: 1.3rem;
+  background: linear-gradient(90deg, #00e0ff, #00b56a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+
+.nav-links button {
+  background: transparent;
+  border: none;
+  margin: 0 0.8rem;
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links button:hover {
+  color: #00b56a;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* === Onboarding Section Styles === */
+.onboarding-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem 1rem;
+}
+
+.onboarding-card {
+  width: 270px;
+  min-height: 400px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  text-align: center;
+  color: #222;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.onboarding-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-image video {
+  transition: transform 0.3s ease;
+}
+
+.card-image video:hover {
+  transform: scale(1.03);
+}
+
+.card-content h3 {
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.card-content p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #333;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+
+/* ================= CONTENT SECTIONS ================= */
+.content-section {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  color: #222;
+}
+
+.content-section,
+.alt-bg {
+  background: rgba(255, 255, 255, 0.55); /* made semi-transparent */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  padding: 3rem 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  color: #1a1a1a;
+  transition: background 0.4s ease, box-shadow 0.3s ease;
+}
+.content-section:hover,
+.alt-bg:hover {
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+.content-section h2 {
+  color: #e26237;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.content-section p,
+.process-list li,
+.tech-list li {
+  color: #1a1a1a;
+}
+
+
+.process-list, .tech-list {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  margin: 2rem auto;
+  max-width: 700px;
+}
+
+.process-list li,
+.tech-list li {
+  font-size: 1rem;
+  margin: 1rem 0;
+  line-height: 1.5;
+}
+
+/* ================= IMPACT GRID ================= */
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.impact-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+  font-size: 1rem;
+}
+
+/* ================= VISION SECTION ================= */
+.vision-section {
+  padding: 4rem 2rem;
+}
+
+.cta-btn {
+  background: linear-gradient(90deg, #b94d05, #da7014);
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.8rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  box-shadow: 0 6px 20px rgba(53, 55, 55, 0.4);
+  transform: translateY(-2px);
+}
+
+/* ================= FOOTER ================= */
+.landing-footer {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(5px);
+  text-align: center;
+  padding: 0.7rem;
+  color: #000000;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.3rem;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  .content-section h2 {
+    font-size: 1.6rem;
+  }
+}
+/* ===== NAVBAR ANIMATION & ACTIVE STATE (v3.3 – no hamburger) ===== */
+
+.enhanced-navbar {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
+}
+
+.enhanced-navbar:hover {
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links button {
+  background: transparent;
+  border: none;
+  margin: 0 0.8rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links button::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #00b56a, #00e0ff);
+  border-radius: 2px;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.nav-links button:hover::after {
+  width: 80%;
+}
+
+.active-link {
+  color: #00b56a !important;
+  font-weight: 600;
+}
+
+.active-link::after {
+  width: 80%;
+}
+
+@media (max-width: 768px) {
+  .nav-links button {
+    font-size: 0.95rem;
+    margin: 0 0.4rem;
+  }
+}

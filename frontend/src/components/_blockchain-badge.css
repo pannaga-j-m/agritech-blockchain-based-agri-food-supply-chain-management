@@ -1,0 +1,20 @@
+/* src/components/_blockchain-badge.css */
+.chain-badge{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:0.92rem;
+}
+.chain-badge .chain-icon{
+  width:34px; height:34px; border-radius:8px;
+  display:flex; align-items:center; justify-content:center;
+  background: linear-gradient(135deg, rgba(255,255,255,0.02), transparent);
+  border:1px solid var(--glass-border);
+}
+.chain-badge.verified .chain-icon{
+  background: linear-gradient(90deg,var(--neon-blue),var(--success));
+  color:#021018;
+  box-shadow: 0 6px 18px rgba(0,224,255,0.06);
+}
+.chain-title{font-weight:600; color:var(--muted-ink); }
+.chain-link{ background:transparent; border:none; color:var(--muted-ink); cursor:pointer; font-weight:600; padding:4px 6px; }

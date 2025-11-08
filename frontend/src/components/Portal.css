@@ -1,0 +1,27 @@
+/* src/components/Portal.css - shared portal styles (polished) */
+.page-container{ max-width:920px; margin:18px auto; padding:12px; }
+.page-header{ text-align:left; margin-bottom:12px; }
+.page-header h1{ font-size:1.6rem; margin:0; color:var(--text) }
+
+/* wallet display used across */ 
+.wallet-display{ display:inline-block; padding:8px 12px; border-radius:10px; background:var(--card-bg); border:1px solid var(--glass-border); margin-bottom:12px; }
+
+/* product lists */
+.product-list{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:14px; margin-top:14px; }
+.action-card{ padding:14px; border-radius:12px; background:var(--card-bg); border:1px solid var(--glass-border); box-shadow:var(--soft-shadow); }
+.action-card p{ margin:6px 0; color:var(--muted-ink); }
+.action-card strong{ color:var(--text) }
+
+/* consumer input */
+.consumer-view input{ padding:12px; border-radius:10px; border:1px solid var(--glass-border); background:transparent; color:var(--text) }
+.consumer-view button{ padding:12px 14px; border-radius:10px }
+
+/* status */
+.status-message{ margin-top:10px; padding:10px; border-radius:8px; background:var(--panel-glass); color:var(--muted-ink) }
+
+/* role-specific headers color hints */
+.distributor-portal .page-header h1{ color: #ff9800; }
+.retailer-portal .page-header h1{ color: #e91e63; }
+
+/* history list */
+.history-list li{ margin-bottom:10px; padding-bottom:10px; border-bottom:1px dashed rgba(0,0,0,0.04) }

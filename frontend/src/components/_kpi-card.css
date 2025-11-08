@@ -1,0 +1,3 @@
+/* src/components/_kpi-card.css */
+.kpi-card{ padding:16px; border-radius:12px; }
+.kpi-card .kpi-value{ font-size: 1.4rem; font-weight: 700; color:var(--text); }

@@ -1,0 +1,47 @@
+.story-container {
+  max-width: 800px;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.story-step {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  background: #fff;
+  border-radius: 16px;
+  padding: 1rem 1.5rem;
+  margin: 1rem 0;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.story-icon {
+  font-size: 2rem;
+}
+
+.story-text h3 {
+  margin: 0;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.chain-glow {
+  position: absolute;
+  left: 50%;
+  bottom: -1px;
+  width: 4px;
+  height: 30px;
+  background: linear-gradient(180deg, #00e0ff, #00b56a);
+  border-radius: 4px;
+  transform: translateX(-50%);
+}
+
+.proof-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}

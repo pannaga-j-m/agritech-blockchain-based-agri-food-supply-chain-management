@@ -1,0 +1,63 @@
+/* ==== Consumer Dashboard Background (Split Gradient) ==== */
+.consumer-page {
+  min-height: 100vh;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  background: linear-gradient(
+    120deg,
+    #ffb36b 0%,      /* warm agriculture orange */
+    #ffc48f 35%,     /* soft transition */
+    #c9f1ff 60%,     /* light cloud aqua */
+    #9fe1fc 100%     /* bright tech blue */
+  );
+}
+
+/* Optional soft blur like figma UI */
+.backdrop-blur {
+  backdrop-filter: blur(6px);
+}
+
+/* Center consumer card */
+.consumer-container {
+  width: 65%;
+  margin-top: 50px;
+  background: rgba(255,255,255,0.75);
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 15px 45px rgba(0,0,0,0.12);
+  animation: fadeUp .5s ease;
+}
+
+/* Smooth fade animation */
+@keyframes fadeUp {
+  from { opacity:0; transform: translateY(12px); }
+  to { opacity:1; transform: translateY(0); }
+}
+
+/* Input & Button styling — optional improvement */
+.consumer-container input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  width: 60%;
+  font-size: 16px;
+}
+
+.consumer-container button {
+  padding: 12px 22px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #2f6fae, #00d0ff);
+  color: white;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.consumer-container button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}

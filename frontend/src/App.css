@@ -1,0 +1,107 @@
+/* src/App.css - App shell and landing hero tweaks */
+.app-shell{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  background:var(--bg);
+  color:var(--text);
+}
+
+/* top app header (global) */
+.app-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 28px;
+  gap:12px;
+  background:transparent;
+}
+
+/* logo area */
+.brand {
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.brand .logo {
+  width:44px;
+  height:44px;
+  border-radius:10px;
+  background:linear-gradient(135deg,var(--neon-blue),var(--leaf-green));
+  box-shadow: 0 6px 18px rgba(0,224,255,0.09);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#021018;
+  font-weight:700;
+}
+
+/* page content area */
+.content-area {
+  padding: 18px;
+  flex:1;
+}
+
+/* landing hero */
+.hero {
+  border-radius:14px;
+  padding:36px;
+  display:flex;
+  gap:28px;
+  align-items:center;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+  border:1px solid var(--glass-border);
+}
+
+/* primary headline */
+.hero h1{
+  margin:0;
+  font-size:2.1rem;
+  line-height:1.05;
+  letter-spacing:-0.6px;
+  color:var(--text);
+}
+.hero p{ color:var(--muted-ink); margin:8px 0 0 0 }
+
+/* compact nav for stakeholders */
+.stakeholder-nav { display:flex; gap:12px; align-items:center; }
+
+/* small UI helpers for cards */
+.kpi-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px; margin-top:18px; }
+/* src/App.css - Global Application Shell Styling */
+
+/* Default background for all pages except landing */
+.app-shell {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #e2f5f0 100%);
+  animation: gradientShift 10s ease-in-out infinite alternate;
+  background-size: 200% 200%;
+  font-family: "Inter", "Poppins", sans-serif;
+  color: #222;
+  transition: background 0.5s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Smooth gradient motion */
+@keyframes gradientShift {
+  0% {
+    background-position: left top;
+  }
+  100% {
+    background-position: right bottom;
+  }
+}
+
+/* Optional global padding & navbar area */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 28px;
+}
+
+/* Ensure smooth transitions */
+* {
+  transition: all 0.3s ease;
+}
