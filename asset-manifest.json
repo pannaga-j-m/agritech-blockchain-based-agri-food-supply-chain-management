@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/agri/static/css/main.ea0b22a1.css",
+    "main.js": "/agri/static/js/main.81cdc7e8.js",
+    "static/js/453.d7446e4a.chunk.js": "/agri/static/js/453.d7446e4a.chunk.js",
+    "static/media/Animated_Delivery_Truck_Dashboard_Background.mp4": "/agri/static/media/Animated_Delivery_Truck_Dashboard_Background.fbd714c3ad1306641c46.mp4",
+    "static/media/farmer-bg.jpg": "/agri/static/media/farmer-bg.762fbd6b35e902120449.jpg",
+    "static/media/retailer-bg.jpg": "/agri/static/media/retailer-bg.67b850d38afcfba2f4c2.jpg",
+    "static/media/Retailer.mp4": "/agri/static/media/Retailer.f64df80261eb527bb3f3.mp4",
+    "static/media/Farmer.mp4": "/agri/static/media/Farmer.8af8f0656858b30f7fc9.mp4",
+    "static/media/Consumer.mp4": "/agri/static/media/Consumer.8b9469d8ed7c03a58da5.mp4",
+    "static/media/Location tracking-rafiki.svg": "/agri/static/media/Location tracking-rafiki.399a06c9473cd13e27a6888cf98433be.svg",
+    "static/media/Distributor.mp4": "/agri/static/media/Distributor.b8c162f01155f88af035.mp4",
+    "static/media/back.jpg": "/agri/static/media/back.b539818db62d24991508.jpg",
+    "index.html": "/agri/index.html",
+    "main.ea0b22a1.css.map": "/agri/static/css/main.ea0b22a1.css.map",
+    "main.81cdc7e8.js.map": "/agri/static/js/main.81cdc7e8.js.map",
+    "453.d7446e4a.chunk.js.map": "/agri/static/js/453.d7446e4a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ea0b22a1.css",
+    "static/js/main.81cdc7e8.js"
+  ]
+}
