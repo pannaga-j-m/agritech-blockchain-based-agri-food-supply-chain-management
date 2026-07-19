@@ -336,7 +336,6 @@ Add screenshots of:
 
 🔗 GitHub: https://github.com/pannaga-j-m
 
-📧 Email: your-email@example.com
 
 ---
 
