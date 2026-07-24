@@ -35,7 +35,7 @@ pipeline {
 
         stage('Compile Smart Contracts') {
             steps {
-                dir('blockchain') {
+                dir('Blockchain') {
                     sh '''
                         npm install
                         npx hardhat compile
