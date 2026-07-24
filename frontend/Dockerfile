@@ -1,1 +1,3 @@
-from
+from nginx
+workdir /app
+copy ..
