@@ -48,7 +48,7 @@ pipeline {
             steps {
                 sh '''
                     docker build -t ${FRONTEND_IMAGE}:${IMAGE_TAG} ./frontend
-                    docker build -t ${BLOCKCHAIN_IMAGE}:${IMAGE_TAG} ./blockchain
+                    docker build -t ${BLOCKCHAIN_IMAGE}:${IMAGE_TAG} ./Blockchain
                 '''
             }
         }
