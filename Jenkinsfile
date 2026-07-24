@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         AWS_REGION = 'ap-south-1'
-        ECR_REGISTRY = '123456789012.dkr.ecr.ap-south-1.amazonaws.com'
+        ECR_REGISTRY = '603433801149.dkr.ecr.ap-south-1.amazonaws.com'
 
         FRONTEND_IMAGE = 'agritech-frontend'
         BLOCKCHAIN_IMAGE = 'agritech-blockchain'

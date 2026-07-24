@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: agritech-frontend
-        image: <YOUR_ECR_REPOSITORY>/agritech-frontend:latest
+        image: 603433801149.dkr.ecr.ap-south-1.amazonaws.com/agritech-frontend
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
